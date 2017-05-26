@@ -8,12 +8,12 @@
 <body>
 
 <form action="test_printorder.php" method="post" autocomplete="on">
-应用编号: <input type="text" name="appid" required="required" /><br />
-应用密钥: <input type="text" name="appsecret" required="required" /><br />
-接口网关: <input type="text" name="urlapis" value="http://api.test.shuwang.info/gateway/rest" required="required" /><br />
+应用编号<span style="color:Red">*</span>: <input type="text" name="appid" required="required" /><br />
+应用密钥<span style="color:Red">*</span>: <input type="text" name="appsecret" required="required" /><br />
+接口网关<span style="color:Red">*</span>: <input type="text" name="urlapis" value="http://api.test.shuwang.info/gateway/rest" required="required" /><br />
 <hr /><br />
-订单编号: <input type="text" name="orderid" required="required" /><br />
-设备编号: <input type="text" name="deviceid" required="required" /><br />
+订单编号<span style="color:Red">*</span>: <input type="text" name="orderid" required="required" />订单编号不能重复<br />
+设备编号<span style="color:Red">*</span>: <input type="text" name="deviceid" required="required" />设备编号参考设备铭牌SN<br />
 <hr /><br />
 订单序号: <input type="text" name="seq" value="3" /><br />
 店铺名称: <input type="text" name="shopname" value="福建数网" /><br />

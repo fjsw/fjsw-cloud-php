@@ -18,6 +18,7 @@ class ShuwangProtocol
 	
 	public function callMethod(array $params) {
 		$params["appid"] = $this->appid;
+		$params["timestamp"] = time();
 		// sign
 		$signature = $this->signRequest($params);
 		$params["sign"] = $signature;
