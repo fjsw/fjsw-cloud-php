@@ -30,7 +30,9 @@ class ShuwangProtocol
 		ksort($params);
 		$sorted_str = "";
 		foreach ($params as $key => $val) {
-			$sorted_str .= "$key$val";
+			if (!empty($val)) {
+				$sorted_str .= "$key$val";
+			}
 		}
 		//var_dump($sorted_str);
 		// hmac md5
@@ -47,7 +49,7 @@ class ShuwangProtocol
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_POST, true);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-			'Content-Type: application/json',
+			'Content-Type: application/json;charset=UTF-8',
 			'Content-Length: ' . strlen($json_string))
 		);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $json_string);
